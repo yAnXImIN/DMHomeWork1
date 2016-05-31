@@ -100,8 +100,10 @@ public class Task1 {
 
 			@Override
 			public int compare(Double o1, Double o2) {
-				
-				return (int)(o1-o2);
+				if(o1-o2>0)
+					return 1;
+				else
+					return -1;
 			}
 		});
 		double me = 0;
@@ -113,6 +115,6 @@ public class Task1 {
 		}
 		double m1 = temp.get((temp.size()+1)/4-1);
 		double m3 = temp.get((temp.size()+1)/4*3-1);
-		System.out.println(name+"的最大值为"+max +",的最小值为"+min+",均值为"+(sum/temp.size())+",缺少值有"+(list.size()-temp.size())+",中值为"+me+",四分数"+m1+","+m3);
+		System.out.println(name+"的最大值为"+max +",最小值为"+min+",均值为"+(sum/temp.size())+",缺少值有"+(list.size()-temp.size())+",中值为"+me+",四分数"+m1+","+m3);
 	}
 }
